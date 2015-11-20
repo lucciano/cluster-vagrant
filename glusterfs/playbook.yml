@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: GlusterFS server
+      yum: pkg=glusterfs-server state=latest
+      become: true
+      become_user: root

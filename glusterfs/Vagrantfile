@@ -11,9 +11,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.ssh.forward_agent = true
 
   config.vm.define "serv1" do |serv1|
-    serv1.vm.box = "hansode/fedora-21-server-x86_64"
+    serv1.vm.box = "centos/7"
     serv1.vm.provider "virtualbox" do |vb|
       vb.customize ["modifyvm", :id, "--memory", "128"]
+    end
+    serv1.vm.provision "ansible" do |ansible|
+      ansible.verbose = "vvvv"
+      ansible.playbook = "playbook.yml"
     end
   end
 

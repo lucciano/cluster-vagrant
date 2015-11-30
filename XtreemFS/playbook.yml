@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: true
+  become_user: root 
+  tasks:
+
+    - name: upgrade all packages
+      yum: name=* state=latest
+
+    - name: GlusterFS server
+      yum: pkg=wget state=latest
+
+    - name: Add XtremeFS repo
+      shell : "cd /etc/yum.repos.d/ ; wget http://download.opensuse.org/repositories/home:/xtreemfs/CentOS_7/home:xtreemfs.repo"
+
+    - name : Install XtremeFS client/server
+      yum: pkg={{ item }} state=latest
+      with_items:
+           - xtreemfs-client
+           - xtreemfs-server
+

@@ -1,6 +1,10 @@
 ---
 - hosts: all
   tasks:
+
+    - name: upgrade all packages
+      yum: name=* state=latest
+
     - name: GlusterFS server
       yum: pkg=glusterfs-server state=latest
       become: true

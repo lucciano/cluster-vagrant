@@ -66,12 +66,12 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
 	sudo -s
-	cd /etc/apt/apt.conf.d
-	curl http://www.beegfs.com/release/latest-stable/dists/beegfs-deb8.list > beegfs-deb8.list
-	apt-get update
+	cd /etc/apt/sources.list.d/
+	curl http://www.beegfs.com/release/beegfs_2015.03/dists/beegfs-deb8.list > /etc/apt/sources.list.d/beegfs-deb8.list
 	curl http://www.beegfs.com/release/beegfs_2015.03/gpg/DEB-GPG-KEY-beegfs | apt-key add -
+	apt-get update
 
-	atp-get install -yq beegfs-mgmtd beegfs-meta beegfs-storage
+	apt-get install -yq beegfs-mgmtd beegfs-meta beegfs-storage
      
    SHELL
 end

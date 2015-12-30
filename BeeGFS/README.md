@@ -1,7 +1,13 @@
-sudo -s
-cd /etc/apt/apt.conf.d
-curl http://www.beegfs.com/release/latest-stable/dists/beegfs-deb8.list > beegfs-deb8.list
-apt-get update
-curl http://www.beegfs.com/release/beegfs_2015.03/gpg/DEB-GPG-KEY-beegfs | apt-key add -
+http://www.beegfs.com/wiki/ManualInstallWalkThrough
 
-atp-get install -yq beegfs-mgmtd beegfs-meta beegfs-storage
+Vagrant.configure("2") do |config|
+  config.vm.provision "shell", inline: "echo Hello"
+
+  config.vm.define "web" do |web|
+    web.vm.box = "ubuntu/vivid64"
+  end
+
+  config.vm.define "db" do |db|
+    db.vm.box = "ubuntu/vivid64"
+  end
+end

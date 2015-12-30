@@ -71,7 +71,7 @@ Vagrant.configure(2) do |config|
 	curl http://www.beegfs.com/release/beegfs_2015.03/gpg/DEB-GPG-KEY-beegfs | apt-key add -
 	apt-get update
 
-	apt-get install -yq beegfs-mgmtd beegfs-meta beegfs-storage
+	apt-get install -yq beegfs-mgmtd beegfs-meta beegfs-storage beegfs-client beegfs-helperd beegfs-utils  beegfs-admon
      
    SHELL
 end

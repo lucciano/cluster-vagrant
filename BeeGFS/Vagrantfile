@@ -17,8 +17,8 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.define "node02" do |node| # Metadata Server
-    node.vm.network "private_network", ip: "192.168.15.1"
-    node.vm.hostname = "node01"
+    node.vm.network "private_network", ip: "192.168.15.2"
+    node.vm.hostname = "node02"
     node.vm.box = "ubuntu/vivid64"
     node.vm.provision "shell", inline: <<-SHELL
 	sudo -s
@@ -33,9 +33,9 @@ Vagrant.configure(2) do |config|
 
   end
 
-  config.vm.define "node02" do |node| # Storage Server
-    node.vm.network "private_network", ip: "192.168.15.1"
-    node.vm.hostname = "node01"
+  config.vm.define "node03" do |node| # Storage Server
+    node.vm.network "private_network", ip: "192.168.15.3"
+    node.vm.hostname = "node03"
     node.vm.box = "ubuntu/vivid64"
     node.vm.provision "shell", inline: <<-SHELL
 	sudo -s
@@ -51,8 +51,8 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.define "node04" do |node| # Client
-    node.vm.network "private_network", ip: "192.168.15.1"
-    node.vm.hostname = "node01"
+    node.vm.network "private_network", ip: "192.168.15.4"
+    node.vm.hostname = "node04"
     node.vm.box = "ubuntu/vivid64"
     node.vm.provision "shell", inline: <<-SHELL
 	sudo -s
@@ -68,8 +68,8 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.define "node05" do |node| # Admon Server (optional for graphical interface)
-    node.vm.network "private_network", ip: "192.168.15.1"
-    node.vm.hostname = "node01"
+    node.vm.network "private_network", ip: "192.168.15.5"
+    node.vm.hostname = "node05"
     node.vm.box = "ubuntu/vivid64"
     node.vm.provision "shell", inline: <<-SHELL
 	sudo -s

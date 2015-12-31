@@ -11,6 +11,12 @@ Vagrant.configure(2) do |config|
 	apt-get update
 
 	apt-get install -yq beegfs-mgmtd 
+
+	echo 192.168.15.1 node01 >> /etc/hosts
+	echo 192.168.15.2 node02 >> /etc/hosts
+	echo 192.168.15.3 node03 >> /etc/hosts
+	echo 192.168.15.4 node04 >> /etc/hosts
+	echo 192.168.15.5 node05 >> /etc/hosts
      
   SHELL
 
@@ -28,6 +34,13 @@ Vagrant.configure(2) do |config|
 	apt-get update
 
 	apt-get install -yq beegfs-meta 
+
+	echo 192.168.15.1 node01 >> /etc/hosts
+	echo 192.168.15.2 node02 >> /etc/hosts
+	echo 192.168.15.3 node03 >> /etc/hosts
+	echo 192.168.15.4 node04 >> /etc/hosts
+	echo 192.168.15.5 node05 >> /etc/hosts
+
      
   SHELL
 
@@ -45,7 +58,13 @@ Vagrant.configure(2) do |config|
 	apt-get update
 
 	apt-get install -yq beegfs-storage
-     
+
+ 	echo 192.168.15.1 node01 >> /etc/hosts
+	echo 192.168.15.2 node02 >> /etc/hosts
+	echo 192.168.15.3 node03 >> /etc/hosts
+	echo 192.168.15.4 node04 >> /etc/hosts
+	echo 192.168.15.5 node05 >> /etc/hosts
+    
   SHELL
 
   end
@@ -62,6 +81,12 @@ Vagrant.configure(2) do |config|
 	apt-get update
 
 	apt-get install -yq beegfs-client beegfs-helperd beegfs-utils
+
+	echo 192.168.15.1 node01 >> /etc/hosts
+	echo 192.168.15.2 node02 >> /etc/hosts
+	echo 192.168.15.3 node03 >> /etc/hosts
+	echo 192.168.15.4 node04 >> /etc/hosts
+	echo 192.168.15.5 node05 >> /etc/hosts
      
   SHELL
 
@@ -79,6 +104,12 @@ Vagrant.configure(2) do |config|
 	apt-get update
 
 	apt-get install -yq beegfs-admon
+
+	echo 192.168.15.1 node01 >> /etc/hosts
+	echo 192.168.15.2 node02 >> /etc/hosts
+	echo 192.168.15.3 node03 >> /etc/hosts
+	echo 192.168.15.4 node04 >> /etc/hosts
+	echo 192.168.15.5 node05 >> /etc/hosts
      
   SHELL
 

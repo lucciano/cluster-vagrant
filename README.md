@@ -3,7 +3,7 @@ cluster-vagrant
 
 varius cluster test, based on vagrant
 
- * BeeGFS 
+ * BeeGFS [FAIL]
  * Ceph 
  * GFS 
  * GlusterFS 

@@ -4,7 +4,7 @@ cluster-vagrant
 varius cluster test, based on vagrant
 
  * BeeGFS [FAIL]
- * Ceph 
+ * Ceph [More or lees working, need manual install]
  * GFS 
  * GlusterFS 
  * HDFS 

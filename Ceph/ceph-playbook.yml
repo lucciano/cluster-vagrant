@@ -4,7 +4,7 @@
   tasks:
 
     - name : Ceph repo
-      apt_repository: repo='deb http://download.ceph.com/debian-firefly/ wheezy main' state=present
+      apt_repository: repo='deb http://download.ceph.com/debian-dumpling/ wheezy main' state=present
 
     - name: caph apt keys
       apt_key: url=https://download.ceph.com/keys/release.asc state=present

@@ -13,3 +13,8 @@
       apt: pkg=ntp state=latest
       notify:
       - restart ntpd
+
+    - lineinfile: dest=/etc/hosts line='192.168.15.11 node01' owner=root group=root mode=0644
+    - lineinfile: dest=/etc/hosts line='192.168.15.12 node02' owner=root group=root mode=0644
+    - lineinfile: dest=/etc/hosts line='192.168.15.13 node03' owner=root group=root mode=0644
+    - lineinfile: dest=/etc/hosts line='192.168.15.14 node04' owner=root group=root mode=0644

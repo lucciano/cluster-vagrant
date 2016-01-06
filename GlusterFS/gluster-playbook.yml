@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+    - name : repo
+      apt_repository: repo='deb http://download.gluster.org/pub/gluster/glusterfs/3.6/3.6.7/Debian/wheezy/apt wheezy main' state=present
+
+    - apt_key: url=http://download.gluster.org/pub/gluster/glusterfs/3.7/3.7.6/pub.key state=present
+
+    - lineinfile: dest=/etc/hosts line='192.168.15.11 node01' owner=root group=root mode=0644
+    - lineinfile: dest=/etc/hosts line='192.168.15.12 node02' owner=root group=root mode=0644
+    - lineinfile: dest=/etc/hosts line='192.168.15.13 node03' owner=root group=root mode=0644
+    - lineinfile: dest=/etc/hosts line='192.168.15.14 node04' owner=root group=root mode=0644

@@ -4,13 +4,10 @@ cluster-vagrant
 varius cluster test, based on vagrant
 
  * BeeGFS [FAIL]
- * Ceph [More or lees working, need manual install]
- * GFS  
- * GlusterFS 
- * HDFS 
- * OrangeFS 
+ * Ceph [FAIL]
+ * GlusterFS [FAIL]
+ * MooseFS [WORKS]
+ * XtreemFS http://www.xtreemfs.org/download_pkg.php
  * Lustre
- * MooseFS 
- * Panfs 
  * Parallel Virtual File System 
- * XtreemFS
+ * OrangeFS 
